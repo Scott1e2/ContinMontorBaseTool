@@ -1,0 +1,25 @@
+{
+    "controls": {
+        "firewall_rules": {
+            "expected_status": "active",
+            "allowed_ports": [
+                80,
+                443,
+                22
+            ],
+            "response_on_violation": "alert"
+        },
+        "authentication_service": {
+            "expected_status": "healthy",
+            "max_failed_logins": 5,
+            "response_on_violation": "alert"
+        }
+    },
+    "third_party_controls": {
+        "service_now": {
+            "expected_status": "compliant",
+            "incident_threshold": 10,
+            "response_on_violation": "notify"
+        }
+    }
+}
