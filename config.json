@@ -1,0 +1,28 @@
+{
+    "log_aggregation": {
+        "sources": [
+            "/path/to/log1.json",
+            "/path/to/log2.log"
+        ],
+        "aggregation_frequency": "hourly"
+    },
+    "anomaly_detection": {
+        "enabled": true,
+        "thresholds": {
+            "login_failure_rate": 0.3,
+            "data_transfer_spike": 1.5
+        }
+    },
+    "behavioral_analytics": {
+        "baseline_period": "30d",
+        "alert_on_deviation": true
+    },
+    "alerts": {
+        "enable_real_time_alerts": true,
+        "alert_channels": [
+            "email",
+            "slack"
+        ],
+        "severity_threshold": "high"
+    }
+}
